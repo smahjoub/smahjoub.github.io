@@ -88,6 +88,22 @@
     //On Window load & Resize
     $(window)
         .on('load', function() { //Load
+            var defaultLocation = new Microsoft.Maps.Location(49.594360, 6.143240);
+            var map = new Microsoft.Maps.Map(document.getElementById('map'), {
+            });
+    
+            map.setOptions({
+                maxZoom: 12,
+                minZoom: 5
+            });
+            map.setView({
+                mapTypeId: Microsoft.Maps.MapTypeId.canvasLight,
+                center: defaultLocation,
+                zoom: 12
+            });
+            var pushpin = new Microsoft.Maps.Pushpin(defaultLocation, null);
+            map.entities.push(pushpin);
+
             // Animation on Page Loading
             $(".preloader").fadeOut("slow");
 
@@ -267,13 +283,7 @@
                 if($(this).val().length === 0) {
                     $(this).parent('.form-group').removeClass('form-group-focus');
                 }
-            });
-
-        //Google Maps
-        $("#map").googleMap();
-        $("#map").addMarker({
-            address: "15 avenue des champs Elysées 75008 Paris" // Your Address
-        });
+            });       
     });
 
 })(jQuery);
