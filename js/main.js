@@ -65,6 +65,20 @@
                         
                         $('#contact-form').find('.messages').html(alertBox);
                         $('#contact-form')[0].reset();
+                    },
+                    success: function ()
+                    {
+                        var messageText = 'Message was sent successfully!';
+                        var alertBox = '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                        
+                        $('#contact-form').find('.messages').html(alertBox);
+                        $('#contact-form')[0].reset();
+                    },
+                    error: function(){
+                        var messageText = 'Message was not sent!';
+                        var alertBox = '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                        
+                        $('#contact-form').find('.messages').html(alertBox);
                     }
                 });
                 return false;
