@@ -114,6 +114,8 @@
                     menu: 'ul.site-main-menu',
                 });
             }
+
+            $("#year").text(new Date().getFullYear());
         })
         .on('resize', function() { //Resize
              mobileMenuHide();

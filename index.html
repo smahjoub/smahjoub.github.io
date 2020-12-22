@@ -303,7 +303,7 @@
                       <div class="block-title">
                         <h3>Contact <span>Form</span></h3>
                       </div>
-                      <form id="contact-form" method="post">
+                      <form id="contact-form"  action="https://formspree.io/f/mwkwwleg" method="post">
 
                         <div class="messages"></div>
 
@@ -319,7 +319,7 @@
                           <div class="form-group form-group-with-icon">
                             <i class="fa fa-envelope"></i>
                             <label>Email Address</label>
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder required="required" data-error="Valid email is required.">
+                            <input id="form_email" type="email" name="_replyto" class="form-control" placeholder required="required" data-error="Valid email is required.">
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
                           </div>
@@ -332,7 +332,7 @@
                             <div class="help-block with-errors"></div>
                           </div>
 
-                          <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div>
+                          <div class="g-recaptcha" data-sitekey="6LcoVxAaAAAAAHm1SjpydFA5gDmRQgE3i1jy32fI"></div>
 
                           <input type="submit" class="button btn-send" value="Send message">
                         </div>
@@ -351,7 +351,7 @@
       <!-- /Main Content -->
     </div>
     <footer>
-      <div class="copyrights">© 2021 All rights reserved.</div>
+      <div class="copyrights">© <span id="year"></span> All rights reserved.</div>
     </footer>
 
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
