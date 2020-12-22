@@ -53,11 +53,10 @@
         $('#contact-form').on('submit', function (e) {
             if (!e.isDefaultPrevented()) {
                 var url = $(this).attr('action')
-
                 $.ajax({
                     type: "POST",
                     url: url,
-                    data: $(this).serialize(),
+                    data: $(this).find(':not(input[name=g-recaptcha-response])').serialize(),
                     success: function (data)
                     {
                         var messageAlert = 'alert-' + data.type;
