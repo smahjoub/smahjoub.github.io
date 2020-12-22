@@ -56,7 +56,7 @@
                 $.ajax({
                     type: "POST",
                     url: url,
-                    data: $(this).find(':not(input[name=g-recaptcha-response])').serialize(),
+                    data: $(this).find('input[name!=g-recaptcha-response]').serialize(),
                     success: function (data)
                     {
                         var messageAlert = 'alert-' + data.type;
